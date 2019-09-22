@@ -13,9 +13,12 @@ export default class Footer extends React.Component {
                 <div className="inner">
                   <div className="footer-widgets">
                     <div className="widget footer-branding">
-                      {_.get(this.props, 'pageContext.site.siteMetadata.footer.logo_img') ? 
+                      {_.get(this.props, 'pageContext.site.siteMetadata.footer.logo_svg') ? 
                       <p className="site-logo">
-                        <Link to={safePrefix('/')}><img src={safePrefix(_.get(this.props, 'pageContext.site.siteMetadata.footer.logo_img'))} alt="Logo" /></Link>
+                        <Link to={safePrefix('/')} dangerouslySetInnerHTML={{
+                            __html: _.get(this.props, 'pageContext.site.siteMetadata.footer.logo_svg')
+                          }}
+                        />
                       </p>
                        : 
                       <p className="site-title">
