@@ -281,11 +281,11 @@ models:
         name: menus
         label: Blog Menus
         description: Which menus should this page show up in
-  contact:
+  register:
     type: page
-    label: Contact
-    template: contact
-    file: contact.md
+    label: Register
+    template: form
+    file: register.md
     singleInstance: true
     fields:
       - type: string
@@ -297,10 +297,14 @@ models:
         name: subtitle
         label: Subtitle
         description: The text shown below the page title.
-      - type: image
-        name: img_path
-        label: Image
-        description: The image shown below the page title.
+      - type: string
+        name: form_url
+        label: Form url
+        description: Form iframe source.
+      - type: number
+        name: form_height
+        label: Form height
+        description: Form iframe height.
       - type: page_menus
         name: menus
         label: Contact Menus

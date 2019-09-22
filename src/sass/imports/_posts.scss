@@ -31,6 +31,10 @@
   line-height: 1.5;
   margin-bottom: 1.66667rem;
   padding-bottom: 1.33333rem;
+
+  &.centered {
+    text-align: center;
+  }
 }
 
 .post-thumbnail {
