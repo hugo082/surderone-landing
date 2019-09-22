@@ -10,11 +10,12 @@ export default class Header extends React.Component {
               <div className="inner">
                 <div className="site-header-inside">
                   <div className="site-branding">
-                    {_.get(this.props, 'pageContext.site.siteMetadata.header.logo_img') && 
+                    {_.get(this.props, 'pageContext.site.siteMetadata.header.logo_svg') && 
                     <p className="site-logo">
-                      <Link to={safePrefix('/')}>
-                        <img src={safePrefix(_.get(this.props, 'pageContext.site.siteMetadata.header.logo_img'))} alt="Logo" />
-                      </Link>
+                      <Link to={safePrefix('/')} dangerouslySetInnerHTML={{
+                        __html: _.get(this.props, 'pageContext.site.siteMetadata.header.logo_svg')
+                        }}
+                      />
                     </p>
                     }
                     {((_.get(this.props, 'pageContext.frontmatter.template') === 'home') || (_.get(this.props, 'pageContext.frontmatter.template') === 'blog')) ? 
@@ -23,6 +24,7 @@ export default class Header extends React.Component {
                     <p className="site-title"><Link to={safePrefix('/')}>{_.get(this.props, 'pageContext.site.siteMetadata.header.title')}</Link></p>
                     }
                   </div>
+                    {/* {JSON.stringify(_.get(this.props, 'pageContext.site.siteMetadata.header'))} */}
                   {(_.get(this.props, 'pageContext.menus.main') && _.get(this.props, 'pageContext.site.siteMetadata.header.has_nav')) && <React.Fragment>
                   <nav id="main-navigation" className="site-navigation" aria-label="Main Navigation">
                     <div className="site-nav-inside">

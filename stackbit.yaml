@@ -49,8 +49,8 @@ models:
             name: title
             label: Header Title
             description: The title displayed in the header if no logo image added.
-          - type: image
-            name: logo_img
+          - type: string
+            name: logo_svg
             label: Logo
             description: The logo image displayed in the header.
           - type: boolean
