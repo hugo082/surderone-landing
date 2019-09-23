@@ -39,10 +39,21 @@
 
 .site-logo {
   margin: 0;
+  position: relative;
 
   svg {
     height: 33px;
     vertical-align: middle;
+  }
+
+  .beta {
+    position: absolute;
+    right: -30px;
+    top: 6px;
+    font-weight: bolder;
+    font-size: 10px;
+    color: #3EB0FD;
+    letter-spacing: 0;
   }
 }
 

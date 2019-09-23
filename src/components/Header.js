@@ -16,6 +16,7 @@ export default class Header extends React.Component {
                         __html: _.get(this.props, 'pageContext.site.siteMetadata.header.logo_svg')
                         }}
                       />
+                      <span className="beta">BETA</span>
                     </p>
                     }
                     {((_.get(this.props, 'pageContext.frontmatter.template') === 'home') || (_.get(this.props, 'pageContext.frontmatter.template') === 'blog')) ? 
